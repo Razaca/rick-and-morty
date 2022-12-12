@@ -1,0 +1,8 @@
+.container {
+    padding: 5rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}

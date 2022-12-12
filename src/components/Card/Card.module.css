@@ -1,0 +1,112 @@
+.card {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: all .2s linear;
+}
+
+.card:hover {
+    scale: 1.2;
+}
+
+.card:hover .info{
+    opacity: 1;
+}
+
+.card span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    box-shadow: 0 0 25px green;
+    width: 100%;
+    height: 100%;
+    scale: 1.1;
+    background-color: green;
+    opacity: 0.4;
+    border: 4px solid green;
+    animation: card1 5s linear infinite;
+}
+
+.card span:nth-child(1) {
+    animation-delay: 1s;
+    animation-duration: 4s;
+}
+
+.card span:nth-child(2) {
+    animation-delay: 2s;
+    animation-duration: 4s;
+}
+
+.card span:nth-child(3) {
+    animation-delay: 3s;
+    animation-duration: 6s;
+}
+
+.card img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    border-radius: 50%;
+}
+
+@keyframes card1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.info {
+    max-width: 150px;
+    background-color: rgba(0, 128, 0, 0.502);
+    padding: .5rem;
+    border-radius: 15px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 3rem;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 25px green;
+    opacity: 0;
+    transition: all .3s linear;
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+.buttons {
+    width: 100px;
+    padding: .5rem;
+    position: relative;
+    z-index: 11;
+}
+
+.buttons :nth-child(1) {
+    margin-right: .5rem;
+}
+
+.buttonClose {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    color: white;
+    background-color: red;
+    border: none;
+    font-weight: 900;
+    border-radius: 50%;
+    position: relative;
+    
+}
